@@ -2,7 +2,7 @@
 
 
 #This node drives the robot based on information from the other nodes.
-
+# @author Jacqueline Zhou @email jianingzhou@brandeis.edu
 import rospy
 import random
 import numpy as np

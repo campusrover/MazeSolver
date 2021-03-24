@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 # This is a PID controller to determine twist values
+# @author Jacqueline Zhou @email jianingzhou@brandeis.edu
 
 import rospy
 from geometry_msgs.msg import Twist
@@ -26,7 +27,7 @@ def calc_pid():
     global prev_error
     global sum_error
     global pid
-    error = min(filtered_laserscan.filtered_ranges) - EXP_DIST
+    error = min(filtered_laserscan.filtered_ranges) - (min(filtered_laserscan.filtered_ranges[60:120])+min(filtered_laserscan.filtered_ranges[240:300]))/2
     prev_error = curr_error
     curr_error = error
     sum_error += curr_error * dT

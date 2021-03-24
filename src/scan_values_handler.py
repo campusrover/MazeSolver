@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 # This processes all of the scan values
-
+# @author Jacqueline Zhou @email jianingzhou@brandeis.edu
 
 import rospy
 import numpy as np
